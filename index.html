@@ -1,13 +1,40 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>marbonnav-ud2-a3-atm</title>
+    <title>Cajero automático</title>
   </head>
   <body>
-    <div id="app"></div>
+    <main class="atm">
+      <h1>Cajero automático</h1>
+
+      <section class="balance">
+        <h2>Saldo disponible</h2>
+        <p><span id="balance">0.00</span> €</p>
+      </section>
+
+      <section class="operations">
+        <h2>Operaciones</h2>
+        <label for="amount">Importe (€)</label>
+        <input
+          id="amount"
+          type="number"
+          min="1"
+          placeholder="Introduce un importe"
+        />
+        <div class="buttons">
+          <button id="deposit" type="button">Ingresar</button>
+          <button id="withdraw" type="button">Retirar</button>
+        </div>
+      </section>
+
+      <section class="results">
+        <h2>Resultado</h2>
+        <p id="message">Selecciona una operación.</p>
+        <div id="banknotes"></div>
+      </section>
+    </main>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
